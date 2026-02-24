@@ -122,20 +122,22 @@ onUnmounted(() => {
 /* Ссылка + стрелка */
 .nav-link {
   display: flex;
-  align-items: center; /* ВАЖНО — выравнивание по центру */
+  align-items: center; /* выравнивание по вертикали */
   gap: 6px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 24px;
   color: #333;
-  transition: 0.2s;
+  transition: color 0.2s;
 }
 
 .arrow-down {
   width: 20px;
   height: 20px;
+  display: inline-block; /* обязательно */
   transform: rotate(180deg);
   transition: transform 0.3s ease;
+  margin-top: 3px;
 }
 
 /* Поворот стрелки при открытии */
@@ -149,7 +151,7 @@ onUnmounted(() => {
   gap: 6px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 24px;
   color: #506C46;
   transition: 0.2s;
 }

@@ -3,7 +3,7 @@
     <Header />
     <Hero />
     <About />
-    <img src="/img/img-between.svg">
+    <img style="width: 100%" src="/img/img-between.svg">
     <Services />
     <CTA />
     <FAQ />

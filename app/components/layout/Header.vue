@@ -9,7 +9,7 @@
           class="nav-item"
       >
         <a href="#" :class="{'nav-link': !isOpen, 'nav-item-click': isOpen}" v-on:click="isOpen = !isOpen">
-          Главная
+          Услуги
           <img class="arrow-down" src="/img/arrow-up.svg" />
         </a>
 
@@ -20,7 +20,7 @@
         </div>
       </div>
 
-      <a href="#" class="nav-link">Услуги</a>
+      <a href="#" class="nav-link">Главная</a>
       <a href="#" class="nav-link">О нас</a>
     </nav>
 

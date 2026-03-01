@@ -100,7 +100,7 @@
 }
 
 .about__right {
-  max-width: 600px;
+  max-width: 680px;
   display: flex;
   flex-direction: column;
   padding: 0 0 0 160px;

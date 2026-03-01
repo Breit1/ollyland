@@ -1,31 +1,43 @@
 <template>
   <header :class="['header', { 'header-scrolled': isScrolled }]">
     <div class="header-left">
-      <img src="/img/logo.svg" alt="OllyLand Logo" class="logo" />
+      <NuxtLink to="/">
+        <img src="/img/logo.svg" alt="OllyLand Logo" class="logo" />
+      </NuxtLink>
     </div>
 
     <nav class="header-center">
-      <div
-          class="nav-item"
-      >
-        <a href="#" :class="{'nav-link': !isOpen, 'nav-item-click': isOpen}" v-on:click="isOpen = !isOpen">
+      <div class="nav-item">
+        <div class="nav-link nav-services">
           Услуги
           <img class="arrow-down" src="/img/arrow-up.svg" />
-        </a>
+        </div>
 
-        <div class="dropdown" v-if="isOpen">
-          <a href="#" class="dropdown-item">ПРОЕКТИРОВАНИЕ <img class="arrow-right" src="/img/arrow-up.svg" /></a>
-          <a href="#" class="dropdown-item">ЛАНДШАФТНЫЕ РАБОТЫ<img class="arrow-right" src="/img/arrow-up.svg" /></a>
-          <a href="#" class="dropdown-item">СЕРВИСНОЕ ОБСЛУЖИВАНИЕ<img class="arrow-right" src="/img/arrow-up.svg" /></a>
+        <div class="dropdown">
+          <a href="#" class="dropdown-item">
+            ПРОЕКТИРОВАНИЕ
+            <img class="arrow-right" src="/img/arrow-up.svg" />
+          </a>
+          <a href="#" class="dropdown-item">
+            ЛАНДШАФТНЫЕ РАБОТЫ
+            <img class="arrow-right" src="/img/arrow-up.svg" />
+          </a>
+          <a href="#" class="dropdown-item">
+            СЕРВИСНОЕ ОБСЛУЖИВАНИЕ
+            <img class="arrow-right" src="/img/arrow-up.svg" />
+          </a>
         </div>
       </div>
 
-      <a href="#" class="nav-link">Главная</a>
-      <a href="#" class="nav-link">О нас</a>
+      <NuxtLink to="/" class="nav-link">Главная</NuxtLink>
+      <NuxtLink to="/about" class="nav-link">О нас</NuxtLink>
     </nav>
 
     <div class="header-right">
-      <div class="phone">+7 (926) 132-09-34</div>
+      <a href="tel:+79261320934" class="phone">
+        +7 (926) 132-09-34
+      </a>
+
       <a href="https://t.me/yourtelegram" target="_blank">
         <img src="/img/telegram-icon.svg" alt="Telegram" class="telegram-icon" />
       </a>
@@ -35,7 +47,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
-const isOpen = ref(false)
+
 const isScrolled = ref(false)
 
 const handleScroll = () => {
@@ -68,47 +80,6 @@ onUnmounted(() => {
   height: 38px;
 }
 
-.nav-link {
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 24px;
-  color: #000000;
-  transition: color 0.2s;
-
-}
-
-.nav-link:hover {
-  color: #506C46; /* любой эффект при наведении */
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.phone {
-  font-weight: 400;
-  font-size: 24px;
-}
-
-.telegram-icon {
-  width: 32px;
-  height: 32px;
-}
-
-/* Когда начинаем скроллить */
-.header-scrolled {
-  background: white;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.arrow-down {
-  rotate: 90deg;
-
-
-}
-
 .header-center {
   display: flex;
   gap: 60px;
@@ -119,10 +90,11 @@ onUnmounted(() => {
   position: relative;
 }
 
-/* Ссылка + стрелка */
+/* NAV LINK */
 .nav-link {
+  cursor: pointer;
   display: flex;
-  align-items: center; /* выравнивание по вертикали */
+  align-items: center;
   gap: 6px;
   text-decoration: none;
   font-weight: 500;
@@ -131,50 +103,72 @@ onUnmounted(() => {
   transition: color 0.2s;
 }
 
-.arrow-right{
+.nav-link:hover {
+  color: #506C46;
+}
+
+/* PHONE */
+.phone {
+  font-weight: 400;
+  font-size: 24px;
+  text-decoration: none;
+  color: #000;
+  transition: 0.2s;
+}
+
+.phone:hover {
+  color: #506C46;
+}
+
+/* RIGHT BLOCK */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.telegram-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* SCROLL EFFECT */
+.header-scrolled {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ARROWS */
+.arrow-right {
   margin-left: 20px;
 }
 
 .arrow-down {
   width: 20px;
   height: 20px;
-  display: inline-block; /* обязательно */
-  transform: rotate(180deg);
+  display: inline-block;
+  rotate: 90deg;
   transition: transform 0.3s ease;
   margin-top: 3px;
-}
-
-/* Поворот стрелки при открытии */
-.nav-item-click .arrow-down {
-  transform: rotate(0deg);
-}
-
-.nav-item-click{
-  display: flex;
-  align-items: center; /* ВАЖНО — выравнивание по центру */
-  gap: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 24px;
-  color: #506C46;
-  transition: 0.2s;
 }
 
 /* DROPDOWN */
 .dropdown {
   position: absolute;
-  top: 120%;
+  top: 100%;
   left: 0;
   background: #f7f7f7;
-  min-width: 442px;
+  min-width: 462px;
   padding: 15px 0;
-  -webkit-box-shadow: -9px 13px 8px 0px rgba(34, 60, 80, 0.2);
-  -moz-box-shadow: -9px 13px 8px 0px rgba(34, 60, 80, 0.2);
   box-shadow: -9px 13px 8px 0px rgba(34, 60, 80, 0.2);
   display: flex;
   flex-direction: column;
   gap: 5px;
-  animation: fadeIn 0.2s ease;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: 0.2s ease;
 }
 
 .dropdown-item {
@@ -190,14 +184,18 @@ onUnmounted(() => {
   background: #f5f5f5;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(5px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* HOVER LOGIC */
+.nav-item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-item:hover .arrow-down {
+  transform: rotate(180deg);
+}
+
+.nav-item:hover .nav-services {
+  color: #506C46;
 }
 </style>

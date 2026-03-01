@@ -42,7 +42,7 @@
 .hero__button {
   background-color: #F7F7F7;
   font-size: 18px;
-  border: black 1px solid;
+  border: black 2px solid;
   color: #000000;
   cursor: pointer;
   transition: 0.3s;

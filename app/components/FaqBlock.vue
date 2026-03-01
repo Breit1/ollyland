@@ -115,6 +115,7 @@ const toggle = (index) => {
 .faq__arrow {
   transition: transform 0.3s ease;
   rotate: 90deg;
+  width: 10px;
 }
 
 .faq__arrow.active {

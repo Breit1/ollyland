@@ -69,8 +69,7 @@
   position: relative;
   z-index: 1;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .about__left {
@@ -102,6 +101,9 @@
 
 .about__right {
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 160px;
 }
 
 .about__title-block {
@@ -150,10 +152,13 @@
 }
 
 .about__btn {
-  margin-top: 32px;
-  padding: 12px 32px;
-  border: 1px solid #000;
+  margin-top: auto;
+  padding: 16px 52px;
+  border: 2px solid #000;
   background: transparent;
   cursor: pointer;
+  align-self: flex-start;
+  font-weight: 500;
+  font-size: 20px;
 }
 </style>

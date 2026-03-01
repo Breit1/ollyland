@@ -22,9 +22,9 @@ button {
 
 .container {
     width: 100%;
-    max-width: 1200px; /* уточним из Figma */
+
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 100px;
 }
 
 /* ===== Sections spacing ===== */

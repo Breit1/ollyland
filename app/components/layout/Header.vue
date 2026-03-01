@@ -14,9 +14,9 @@
         </a>
 
         <div class="dropdown" v-if="isOpen">
-          <a href="#" class="dropdown-item">ПРОЕКТИРОВАНИЕ</a>
-          <a href="#" class="dropdown-item">ЛАНДШАФТНЫЕ РАБОТЫ</a>
-          <a href="#" class="dropdown-item">СЕРВИСНОЕ ОБСЛУЖИВАНИЕ</a>
+          <a href="#" class="dropdown-item">ПРОЕКТИРОВАНИЕ <img class="arrow-right" src="/img/arrow-up.svg" /></a>
+          <a href="#" class="dropdown-item">ЛАНДШАФТНЫЕ РАБОТЫ<img class="arrow-right" src="/img/arrow-up.svg" /></a>
+          <a href="#" class="dropdown-item">СЕРВИСНОЕ ОБСЛУЖИВАНИЕ<img class="arrow-right" src="/img/arrow-up.svg" /></a>
         </div>
       </div>
 
@@ -131,6 +131,10 @@ onUnmounted(() => {
   transition: color 0.2s;
 }
 
+.arrow-right{
+  margin-left: 20px;
+}
+
 .arrow-down {
   width: 20px;
   height: 20px;
@@ -161,11 +165,12 @@ onUnmounted(() => {
   position: absolute;
   top: 120%;
   left: 0;
-  background: white;
-  min-width: 260px;
+  background: #f7f7f7;
+  min-width: 442px;
   padding: 15px 0;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  -webkit-box-shadow: -9px 13px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: -9px 13px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: -9px 13px 8px 0px rgba(34, 60, 80, 0.2);
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -175,7 +180,7 @@ onUnmounted(() => {
 .dropdown-item {
   padding: 12px 20px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 24px;
   font-weight: 500;
   color: #333;
   transition: 0.2s;

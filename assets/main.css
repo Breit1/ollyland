@@ -1,5 +1,9 @@
 /* ===== Reset ===== */
 
+.html{
+    scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -18,6 +22,11 @@ button {
     font-family: "Mulish", sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* ===== Layout ===== */
 
 .container {
@@ -27,10 +36,20 @@ button {
     padding: 0 100px;
 }
 
+
 /* ===== Sections spacing ===== */
 
 section {
     padding: 100px 0; /* будем корректировать */
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    section {
+        padding: 0 15px;
+    }
 }
 
 /* ===== Typography ===== */

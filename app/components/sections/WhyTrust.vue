@@ -1,5 +1,5 @@
 <template>
-  <section class="why-trust">
+  <section id="why-trust" class="why-trust">
     <!-- Декоративные картинки -->
     <img class="why-trust__decor why-trust__decor--top" src="/img/decor-top.svg" alt="" />
     <img class="why-trust__decor why-trust__decor--bottom" src="/img/decor-bottom.svg" alt="" />
@@ -93,5 +93,41 @@ const items = [
 .why-trust__decor--bottom {
   top: 420px;
   left: 0;
+}
+
+@media (max-width: 768px) {
+  .why-trust {
+    padding: 20px 0;
+  }
+
+  .why-trust__title{
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .why-trust__decor{
+    display: none;
+  }
+
+  .why-trust__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px 24px;
+  }
+
+  .why-trust__item img{
+    width: 116px;
+    height: 116px;
+
+  }
+
+  .why-trust__item{
+    gap: 10px;
+  }
+
+  .why-trust__item p{
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
 </style>

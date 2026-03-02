@@ -1,16 +1,19 @@
 <template>
-  <section class="about">
+  <section id="about" class="about">
     <img src="/img/right-background.svg" class="about__bg" alt="" />
 
     <div class="container about__wrapper">
 
       <!-- Левая колонка -->
       <div class="about__left">
+        <div class="about__title-block-phone">
+          <h2>О НАС</h2>
+        </div>
         <div class="about__photo"></div>
 
         <div class="about__author">
           <h3>ОЛЬГА ЯКОВЛЕВА</h3>
-          <p>Основательница ОллиЛэнд</p>
+          <p>ОСНОВАТЕЛЬНИЦА ОЛЛИЛЭНД</p>
         </div>
       </div>
 
@@ -38,7 +41,7 @@
           в каждом проекте, учитывая пожелания клиентов и особенности окружающей среды.
         </p>
 
-        <button class="about__btn">Подробнее</button>
+<!--        <button class="about__btn">Подробнее</button>-->
       </div>
 
     </div>
@@ -103,7 +106,7 @@
   max-width: 680px;
   display: flex;
   flex-direction: column;
-  padding: 0 0 0 160px;
+  padding: 0 0 0 10%;
 }
 
 .about__title-block {
@@ -136,6 +139,16 @@
   font-size: 48px;
 }
 
+.about__title-block-phone h2 {
+  display: none;
+  margin: 0;
+  font-family: Mulish, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 48px;
+  padding-bottom: 10px;
+}
+
 .about__subtitle {
   margin-top: 20px;
   font-family: 'Great Vibes', cursive;
@@ -160,5 +173,61 @@
   align-self: flex-start;
   font-weight: 500;
   font-size: 20px;
+  transition: all 0.3s;
+}
+
+.about__btn:hover {
+  background: #506C46;
+  color: #fff;
+  border-color: #506C46;
+}
+
+@media (max-width: 768px) {
+
+  .about {
+    padding: 60px 0 15px 0;
+  }
+
+  .about__wrapper {
+    display: block;
+  }
+
+  .about__bg{
+    display: none;
+  }
+
+  .about__left{
+    width: 100%;
+  }
+
+  .about__photo{
+    width: 100%;
+
+  }
+
+  .about__title-block-phone h2 {
+    display: block;
+  }
+
+  .about__title-block h2 {
+    display: none;
+
+  }
+
+  .about__subtitle{
+    font-size: 24px;
+  }
+
+  .about__right{
+    padding: 0;
+  }
+  .line{
+    position: absolute;
+    margin: 0 -15px;
+  }
+
+  .about__subtitle{
+    text-align: center;
+  }
 }
 </style>

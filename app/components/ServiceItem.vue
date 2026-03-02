@@ -88,4 +88,23 @@ defineProps({
   height: 100%;
   object-fit: cover;
 }
+
+@media (max-width: 768px) {
+  .service-item{
+    display: block;
+  }
+
+  .service-item__header h3 {
+    font-size: 24px;
+  }
+
+  .service-item__image img{
+    margin-top: 20px;
+  }
+
+  .service-item__line{
+    margin: 16px -20px 24px;
+    width: 100vw;
+  }
+}
 </style>

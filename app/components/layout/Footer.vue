@@ -27,9 +27,9 @@
         <div class="footer__col">
           <h3>Компания</h3>
           <ul>
-            <li>Услуги</li>
-            <li>О нас</li>
-            <li>Связаться</li>
+            <NuxtLink to="#services"><li>Услуги</li></NuxtLink>
+            <NuxtLink to="#about"><li>О нас</li></NuxtLink>
+            <NuxtLink to="#contact"><li>Связаться</li></NuxtLink>
           </ul>
         </div>
 
@@ -37,9 +37,11 @@
         <div class="footer__col">
           <h3>Контакты</h3>
           <ul>
-            <li>+7 (926) 132-09-34</li>
-            <li>info@ollyland.ru</li>
-            <li>Telegram</li>
+            <a href="tel:+79261320934"><li>+7 (926) 132-09-34</li></a>
+            <li>
+              <a href="mailto:info@ollyland.ru">info@ollyland.ru</a>
+            </li>
+            <a href="https://t.me/yourtelegram"><li>Telegram</li></a>
           </ul>
         </div>
 
@@ -117,11 +119,10 @@
   font-size: 30px;
   line-height: 48px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .footer__col li:hover {
-  opacity: 0.7;
+  color: #f7f7f7;
 }
 
 /* Линия */
@@ -163,5 +164,32 @@
 .footer__policy {
   text-decoration: underline;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .footer__columns {
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: flex-start;
+
+  }
+  .footer__col h3 {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 48px;
+    margin-bottom: 0;
+  }
+
+  .footer__col li {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    cursor: pointer;
+  }
+
+
 }
 </style>

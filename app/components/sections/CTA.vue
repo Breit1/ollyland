@@ -1,5 +1,5 @@
 <template>
-  <section class="contact">
+  <section id="contact" class="contact">
     <!-- Декор -->
     <img class="contact__decor contact__decor--right" src="/img/contact-right.svg" alt="" />
     <img class="contact__decor contact__decor--top" src="/img/contact-top.svg" alt="" />
@@ -8,8 +8,9 @@
 
       <!-- Левая часть -->
       <div class="contact__left">
+        <div class="mobile-h2">ОСТАЛИСЬ ВОПРОСЫ?</div>
         <h2>
-          Оставьте заявку, <br/>и мы свяжемся с вами <br/> для обсуждения проекта
+          Оставьте заявку, <br class="mobile-br"/>и мы свяжемся с вами <br class="mobile-br" /> для обсуждения проекта
         </h2>
       </div>
 
@@ -131,6 +132,15 @@ const submitForm = () => {
  width: 100%;
 }
 
+.mobile-h2{
+  display: none;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 48px;
+  margin: 0;
+}
+
 .contact__left h2 {
   font-family: 'Mulish', sans-serif;
   font-weight: 700;
@@ -206,12 +216,15 @@ input.error + .contact__line {
     align-self: flex-start;
     font-weight: 500;
     font-size: 20px;
+  transition: 0.3s;
 }
 
 .contact__btn:hover {
-  background: #000;
+  background: #506C46;
   color: #fff;
+  border-color: #506C46;
 }
+
 
 /* ===== Декоративные картинки ===== */
 
@@ -228,5 +241,45 @@ input.error + .contact__line {
 .contact__decor--top {
   right: 280px;
   top: 0;
+}
+
+@media (max-width: 768px) {
+
+  .contact {
+    padding: 20px 20px 48px 20px;
+  }
+
+  .contact__decor{
+    display: none;
+
+  }
+
+  .mobile-h2{
+    display: block;
+
+  }
+
+  .contact__container{
+    display: block;
+  }
+
+  .contact__left h2 {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 16px 0;
+  }
+
+  .mobile-br{
+    display: none;
+  }
+
+  input {
+    font-size: 15px;
+  }
+
+  .contact__btn{
+    width: 100%;
+  }
 }
 </style>

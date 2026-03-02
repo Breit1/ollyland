@@ -1,5 +1,5 @@
 <template>
-  <section class="faq">
+  <section id="faq" class="faq">
     <div class="faq__container">
       <h2 class="faq__title">
         Часто задаваемые вопросы
@@ -142,4 +142,40 @@ const toggle = (index) => {
   opacity: 0;
   transform: translateY(-10px);
 }
+
+@media (max-width: 768px) {
+  .faq {
+    padding: 20px 0;
+  }
+  .faq__title {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .faq__line{
+    width: 100vw;
+    margin: 0 -20px 0;
+  }
+
+  .faq__question h3 {
+    font-size: 15px;
+  }
+
+  .faq__question {
+    margin-top: 16px;
+  }
+
+  .faq__list{
+    gap: 16px;
+  }
+
+  .faq__answer{
+    line-height: 24px;
+    font-size: 15px;
+  }
+
+}
+
+
 </style>

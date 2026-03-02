@@ -1,5 +1,5 @@
 <template>
-  <section class="services">
+  <section id="services" class="services">
     <div class="container">
 
       <h2 class="services__title">УСЛУГИ</h2>
@@ -50,5 +50,30 @@ import ServiceItem from '@/components/ServiceItem.vue'
   align-self: flex-start;
   font-weight: 500;
   font-size: 20px;
+  transition: all 0.3s;
+}
+
+.about__btn:hover {
+  background: #506C46;
+  color: #fff;
+  border-color: #506C46;
+}
+
+@media (max-width: 768px) {
+  .services__title{
+    font-size: 28px;
+  }
+
+  .services__title {
+    margin-bottom: 0;
+  }
+
+  .services {
+    padding: 42px 0;
+  }
+
+  .about__btn{
+    width: 100%;
+  }
 }
 </style>

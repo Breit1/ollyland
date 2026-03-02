@@ -3,18 +3,53 @@
     <Header />
     <Hero />
     <About />
-    <img style="width: 100%" src="/img/img-between.svg">
+    <img class="img-between" src="/img/img-between.svg">
     <Services />
     <InfiniteGallery
         :top-images="topImages"
         :bottom-images="bottomImages"
+        class="images"
     />
     <WhyTrust/>
+    <InfiniteGallery
+        :top-images="topImages"
+        class="images-mobile"
+    />
     <FAQ />
     <CTA />
     <Footer />
   </div>
 </template>
+
+<style scoped>
+
+.img-between{
+  width: 100%;
+}
+
+.images-mobile{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .img-between {
+    width: 100%;
+    height: 126px;
+    object-fit: cover;
+    object-position: 90% 70%;
+  }
+
+  .images-mobile{
+    display: block;
+    background: #506C46;
+  }
+
+  .images{
+    display: none;
+  }
+}
+
+</style>
 
 <script setup lang="ts">
 import Header from '../components/layout/Header.vue'

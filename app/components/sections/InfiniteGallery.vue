@@ -13,8 +13,7 @@
         />
       </div>
     </div>
-
-    <div class="row-wrapper">
+    <div class="row-wrapper" v-if="duplicatedBottom.length" >
       <div
           class="row"
           ref="bottomRow"
@@ -32,10 +31,17 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, computed } from 'vue'
+import none from "@nuxt/image/runtime/providers/none";
 
 const props = defineProps({
-  topImages: Array,
-  bottomImages: Array
+  topImages: {
+    type: Array,
+    required: true
+  },
+  bottomImages: {
+    type: Array,
+    default: () => []
+  }
 })
 
 const topOffset = ref(0)
@@ -101,5 +107,11 @@ onUnmounted(() => {
   height: 220px;
   object-fit: cover;
   flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .infinite-gallery {
+    padding: 0;
+  }
 }
 </style>

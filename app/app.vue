@@ -12,6 +12,6 @@ import '../assets/main.css'
 body {
   font-family: "Mulish", sans-serif;
   font-weight: 400;
-
+  scroll-behavior: smooth;
 }
 </style>

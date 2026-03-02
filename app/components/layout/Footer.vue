@@ -190,6 +190,9 @@
     cursor: pointer;
   }
 
+  .footer__bottom{
+    padding: 0 20px 56px;
+  }
 
 }
 </style>

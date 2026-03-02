@@ -194,5 +194,13 @@
     padding: 0 20px 56px;
   }
 
+  .footer__logo-black{
+    width: 157px;
+  }
+
+  .footer__bottom p {
+    font-size: 15px;
+  }
+
 }
 </style>

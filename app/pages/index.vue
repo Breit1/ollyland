@@ -62,6 +62,11 @@ import FAQ from '../components/sections/FAQ.vue'
 import InfiniteGallery from '../components/sections/InfiniteGallery.vue'
 import WhyTrust from "../components/sections/WhyTrust.vue";
 
+useSeoMeta({
+  title: 'Ландшафтное бюро полного цикла в Москве',
+  description: 'Ландшафтное бюро OllyLand — проектирование, озеленение и благоустройство участков в Москве'
+})
+
 const topImages = [
   '/img/gallery/top1.jpg',
   '/img/gallery/top2.jpg',

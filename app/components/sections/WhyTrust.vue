@@ -82,17 +82,33 @@ const items = [
 .why-trust__decor {
   position: absolute;
   z-index: 0;
+
 }
 
 .why-trust__decor--top {
-  width: 40%;
-  bottom: 150px;
+  width: 30%;
+  bottom: 300px;
   right: 0;
 }
 
 .why-trust__decor--bottom {
   top: 420px;
   left: 0;
+}
+
+@media (max-width: 1600px) {
+
+  .why-trust__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .why-trust__item img{
+
+    width: 200px;
+
+  }
+
 }
 
 @media (max-width: 768px) {

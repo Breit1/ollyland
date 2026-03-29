@@ -22,5 +22,25 @@ const faqItems = [
 </script>
 
 <template>
-  <FaqBlock :items="faqItems" />
+  <section id="faq" class="faq">
+  <FaqBlock :items="faqItems" title="Часто задаваемые вопросы" />
+  </section>
 </template>
+
+<style scoped>
+.faq {
+  padding: 120px 0;
+}
+
+.faq__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .faq {
+    padding: 20px 0;
+  }
+}
+</style>

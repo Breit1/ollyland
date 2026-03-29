@@ -243,6 +243,13 @@ input.error + .contact__line {
   top: 0;
 }
 
+@media (max-width: 1300px) {
+  .contact {
+  padding: 170px 36px 200px 36px;
+  }
+  
+}
+
 @media (max-width: 768px) {
 
   .contact {

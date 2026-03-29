@@ -18,7 +18,7 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 936px; /* высота фона */
+  height: 55vw; /* высота фона */
   background: url("/img/up_background.svg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
@@ -31,6 +31,7 @@
   margin-bottom: 20px;
 }
 
+
 .hero__title {
   font-family: 'Great Vibes', cursive;
   font-weight: 400;
@@ -39,7 +40,23 @@
   text-align: center;
   color: #000000;
 }
+@media (max-width: 1350px) {
 
+
+  .hero__logo img {
+    width: 800px;
+  }
+
+  .hero__title {
+    font-family: 'Great Vibes', cursive;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 80px;
+    text-align: center;
+    color: #000000;
+  }
+
+}
 .hero__button {
   background-color: #F7F7F7;
   font-size: 18px;
@@ -65,6 +82,45 @@
   display: none;
 }
 
+@media (max-width: 1100px) {
+
+  .hero{
+    height: auto;
+    background: none;
+    align-items: start;
+    padding: 0 32px;
+  }
+
+  .img-back-mobile{
+    width: 30%;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -35px;
+  }
+  .hero__logo img{
+    display: none;
+
+  }
+  .hero__title {
+    font-size: 64px;
+    line-height: 80px;
+    text-align: left;
+    padding: 20px 0;
+  }
+  .hero__button {
+    font-size: 15px;
+    margin-top: 0;
+    width: 610px;
+
+  }
+
+  .mobile-br {
+    display: block;
+  }
+
+}
+
 @media (max-width: 768px) {
   .hero{
     height: auto;
@@ -76,7 +132,7 @@
     display: block;
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 0px;
   }
   .hero__logo img{
     display: none;

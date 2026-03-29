@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header />
     <Hero />
     <About />
     <img class="img-between" src="/img/img-between.svg">
@@ -17,7 +16,6 @@
     />
     <FAQ />
     <CTA />
-    <Footer />
   </div>
 </template>
 

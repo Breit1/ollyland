@@ -85,7 +85,7 @@ onUnmounted(() => {
 <style scoped>
 .infinite-gallery {
   overflow: hidden;
-  padding: 120px 0;
+  padding: 0 0 120px 0;
 }
 
 .row-wrapper {

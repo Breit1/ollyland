@@ -221,6 +221,75 @@ onUnmounted(() => {
   display: none;
 }
 
+@media (max-width: 1210px) {
+  .phone-text {
+    display: none;
+  }
+
+  .header-right{
+    display: flex;
+    align-items: baseline;
+  }
+  .phone-icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .logo{
+    width: 255px;
+  }
+
+  .header {
+    padding: 20px 15px 20px 15px;
+  }
+
+  /* Центрируем лого */
+  .header-left {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Скрываем десктопное меню */
+  .header-center {
+    display: none;
+  }
+
+  .phone-text {
+    display: none;
+  }
+
+  /* Показываем только иконку */
+  .phone-icon {
+    width: 36px;
+    height: 36px;
+    display: block;
+  }
+
+
+  .telega{
+    display: none;
+  }
+
+  /* Бургер */
+  .burger {
+    display: block;
+  }
+
+  .burger img {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Убираем лишние отступы справа */
+  .header-right {
+    gap: 15px;
+  }
+}
+
 
 @media (max-width: 768px) {
   .logo{

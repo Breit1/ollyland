@@ -60,6 +60,7 @@ defineProps({
   margin: 0;
 }
 
+
 .service-arrow {
   width: 24px;
   height: 24px;
@@ -72,6 +73,7 @@ defineProps({
   margin: 16px 0 24px;
 }
 
+
 .service-item__text {
   font-family: Mulish, sans-serif;
   font-weight: 400;
@@ -80,31 +82,60 @@ defineProps({
 }
 
 .service-item__image {
+  min-width: 450px;
   max-height: 304px;
+  overflow: hidden; /* Важно: скрываем всё, что выходит за пределы */
 }
 
 .service-item__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  object-fit: cover ; /* Обрезает лишнее, сохраняя пропорции */
+  object-position: right center ; /* Прижимает к правому краю */
 }
 
-@media (max-width: 768px) {
-  .service-item{
+@media (max-width: 1250px) {
+  .service-item__header h3 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .service-item__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 940px) {
+  .service-item {
     display: block;
   }
 
-  .service-item__header h3 {
-    font-size: 24px;
+  .service-item__image {
+    min-width: auto;
+    max-height: none;
   }
 
-  .service-item__image img{
-    margin-top: 20px;
+  .service-item__image img {
+    padding: 20px 0 0 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
   }
 
-  .service-item__line{
-    margin: 16px -20px 24px;
+  .service-item__content {
+    max-width: 100%;
+  }
+  .service-item__line {
     width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 16px;
+    margin-bottom: 24px;
   }
+
 }
+
 </style>

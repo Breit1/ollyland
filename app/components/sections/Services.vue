@@ -19,7 +19,7 @@
           description="Для того чтобы ваш сад или парк всегда оставался в идеальном состоянии, мы предлагаем услуги сервисного обслуживания. Это включает регулярный уход за растениями, обрезку, подкормку и другие мероприятия, направленные на поддержание здоровья и красоты вашего зеленого пространства. Мы заботимся о каждом проекте даже после его завершения, чтобы вы могли наслаждаться природой без лишних забот."
           image="/img/service3.svg"
       />
-      <button class="about__btn">Подробнее</button>
+      <NuxtLink to="/services" class="about__btn">Подробнее</NuxtLink>
     </div>
   </section>
 </template>
@@ -32,6 +32,8 @@ import ServiceItem from '@/components/ServiceItem.vue'
 .services {
   padding: 120px 0;
 }
+
+
 
 .services__title {
   font-family: Mulish, sans-serif;
@@ -59,7 +61,7 @@ import ServiceItem from '@/components/ServiceItem.vue'
   border-color: #506C46;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 940px) {
   .services__title{
     font-size: 28px;
   }

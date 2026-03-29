@@ -1,8 +1,7 @@
 <template>
-  <section id="faq" class="faq">
     <div class="faq__container">
       <h2 class="faq__title">
-        Часто задаваемые вопросы
+        {{ props.title }}
       </h2>
 
       <div class="faq__list">
@@ -40,7 +39,6 @@
 
       </div>
     </div>
-  </section>
 </template>
 
 <script setup>
@@ -50,6 +48,10 @@ const props = defineProps({
   items: {
     type: Array,
     required: true
+  },
+  title: {
+    type: String,
+    default: 'Часто задаваемые вопросы'
   }
 })
 
@@ -62,15 +64,7 @@ const toggle = (index) => {
 </script>
 
 <style scoped>
-.faq {
-  padding: 120px 0;
-}
 
-.faq__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 /* Заголовок */
 .faq__title {
@@ -129,6 +123,7 @@ const toggle = (index) => {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
+  white-space: pre-line;
 }
 
 /* Анимация */

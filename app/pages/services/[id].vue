@@ -8,27 +8,30 @@
       <span style="padding: 0 0 0 12px">{{ service.title }}</span>
     </div>
     <div class="service-header">
-      <h1 class="service-title">{{ service.title }}</h1>
+      <h1 class="service-title">{{ service.titlePost || service.title }}</h1>
       <div class="service-description" v-html="service.description"></div>
     </div>
 
-    <img :src="service.image" :alt="service.title" class="service-main-image" />
+    <img :src="service.image" :alt="service.titlePost" class="service-main-image" />
 
     <div class="service-content">
       <h2 class="section-title">{{ service.whyTitle }}</h2>
       <div class="section-description" v-html="service.whyDescription"></div>
     </div>
 
+
     <div style="display: flex; width: 100%; justify-content: center; margin-top: 36px">
       <FaqBlock :items="service.includedItems" :title="service.includedTitle" style="flex: 0 0 940px; padding: 0 140px 0 0" />
-      <div style="width: 460px; height: 609px; background: #D9D9D9; flex-shrink: 0;"></div>
+      <img :src="service.includedImage" style="width: 460px; height: 609px; background: #D9D9D9; flex-shrink: 0;">
     </div>
+    <CTA></CTA>
   </div>
 
 </template>
 
 <script setup>
 import FaqBlock from "~/components/FaqBlock.vue";
+import CTA from "~/components/sections/CTA.vue";
 
 const route = useRoute()
 
@@ -77,6 +80,8 @@ if (!service) {
   line-height: 48px;
   margin-bottom: 24px;
   color: #000;
+  text-transform: uppercase;
+
 }
 
 .service-description {
@@ -88,8 +93,10 @@ if (!service) {
 }
 
 .service-main-image {
-  width: 100%;
-  height: 500px;
+  display: block;
+  margin: 0 auto;
+  width: 940px;
+  height: 528px;
   object-fit: cover;
   margin-bottom: 40px;
 }

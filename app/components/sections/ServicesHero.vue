@@ -36,7 +36,7 @@
 }
 .hero__title {
 
-  font-size: 48px;
+  font-size: 40px;
 
   text-align: left;
   padding: 20px 0;

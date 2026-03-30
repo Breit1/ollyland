@@ -1,8 +1,7 @@
 <template>
   <NuxtLink :to="{ path: `/services/${service.id}`, query: { service: JSON.stringify(service) } }" class="service-card">
     <div class="service-card__header">
-<!--      <img src="/img/arrow-up.svg" alt="Arrow" class="service-card__arrow" />-->
-      <div style="width: 372px; height: 283px; background: #D9D9D9"></div>
+      <img :src="service.imagePage"/>
       <div style="display:flex; align-items: center; justify-content: space-between; width: 100%; padding: 30px 0">
         <h3 class="service-card__title">{{ service.title }}</h3>
         <div class="service-item__image">
